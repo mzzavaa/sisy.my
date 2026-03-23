@@ -1,0 +1,418 @@
+{{ define "main" }}
+
+<!-- ─────────────────────────────────────────────
+     HERO
+───────────────────────────────────────────── -->
+<section class="hero">
+  <div class="container">
+    <span class="hero-label fade-in">Expert Profile URLs for Women Speakers</span>
+    <h1 class="fade-in">Your expert profile,<br><em>one link away</em></h1>
+    <p class="hero-sub fade-in">
+      <strong>sisy.my/yourname</strong> — a beautiful speaker card that opens doors.
+      Share it everywhere: LinkedIn, email signatures, event badges, stage bios.
+    </p>
+    <div class="hero-actions fade-in">
+      <a href="https://sisy.world" class="btn btn-primary btn-lg">Claim Your URL</a>
+      <a href="#examples" class="btn btn-outline btn-lg">See Examples</a>
+    </div>
+    <p class="hero-trust fade-in">
+      <i data-lucide="check-circle"></i>
+      Free to start &nbsp;·&nbsp;
+      <i data-lucide="check-circle"></i>
+      No coding needed &nbsp;·&nbsp;
+      <i data-lucide="check-circle"></i>
+      Ready in 5 minutes
+    </p>
+
+    <!-- Browser Mockup -->
+    <div class="hero-mockup fade-in">
+      <div class="mockup-browser">
+        <!-- Chrome bar -->
+        <div class="mockup-chrome">
+          <div class="mockup-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="mockup-url-bar">
+            <i data-lucide="lock"></i>
+            <span class="url-base">sisy.my/</span><span class="url-slug" id="url-type">sarah-chen</span><span class="url-cursor"></span>
+          </div>
+        </div>
+
+        <!-- Profile Content -->
+        <div class="mockup-profile">
+          <div class="profile-avatar-wrap">
+            <div class="profile-avatar">SC</div>
+            <div class="profile-verified">
+              <i data-lucide="check"></i>
+            </div>
+          </div>
+          <div class="profile-info">
+            <h3 class="profile-name">Dr. Sarah Chen</h3>
+            <p class="profile-title">AI Ethics Researcher &amp; Keynote Speaker</p>
+            <div class="profile-badges">
+              <span class="profile-badge"><i data-lucide="award"></i> TEDx Speaker</span>
+              <span class="profile-badge"><i data-lucide="building-2"></i> MIT AI Lab</span>
+              <span class="profile-badge"><i data-lucide="globe"></i> 14 countries</span>
+            </div>
+            <p class="profile-bio">
+              I help organizations navigate the ethical dimensions of AI deployment —
+              from bias audits to governance frameworks that actually work in the real world.
+            </p>
+            <div class="profile-tags">
+              <span class="profile-tag accent">AI Ethics</span>
+              <span class="profile-tag accent">Tech Policy</span>
+              <span class="profile-tag">Keynotes</span>
+              <span class="profile-tag">Workshops</span>
+              <span class="profile-tag">Advisory</span>
+            </div>
+            <div class="profile-video-stub">
+              <div class="profile-video-play">
+                <i data-lucide="play"></i>
+              </div>
+              <div class="profile-video-meta">
+                <div class="profile-video-label">Featured Talk</div>
+                <div class="profile-video-title">"When Algorithms Decide: Building Ethical AI at Scale" — TEDx Berlin</div>
+              </div>
+            </div>
+            <div class="profile-ctas">
+              <a href="#" class="profile-cta primary">
+                <i data-lucide="calendar"></i> Book a Talk
+              </a>
+              <a href="#" class="profile-cta secondary">
+                <i data-lucide="download"></i> Media Kit
+              </a>
+              <a href="#" class="profile-cta secondary">
+                <i data-lucide="qr-code"></i> QR Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────
+     EXAMPLE PROFILES
+───────────────────────────────────────────── -->
+<section class="section section-alt" id="examples">
+  <div class="container">
+    <h2 class="fade-in">Meet some <em style="font-style:italic;color:var(--clr-accent)">sisy.my</em> experts</h2>
+    <p class="section-lead fade-in">Every card is a living speaker page — beautiful, up-to-date, and instantly shareable.</p>
+
+    <div class="grid grid-3">
+
+      <!-- Dr. Sarah Chen -->
+      <div class="profile-showcase-card fade-in fade-in-delay-1">
+        <div class="profile-card-header">
+          <div class="showcase-avatar a1" style="position:relative;">
+            SC
+            <div class="showcase-avatar-verified">
+              <i data-lucide="check"></i>
+            </div>
+          </div>
+          <div class="showcase-header-info">
+            <div class="showcase-url">sisy.my/sarah-chen</div>
+            <div class="showcase-name">Dr. Sarah Chen</div>
+            <p class="showcase-role">AI Ethics Researcher · MIT AI Lab</p>
+          </div>
+        </div>
+        <div class="profile-card-body">
+          <p class="showcase-bio">
+            Researcher, speaker, and author on the ethics of artificial intelligence.
+            TEDx alum with talks in 14 countries. Available for keynotes and advisory.
+          </p>
+          <div class="showcase-tags">
+            <span class="showcase-tag">AI Ethics</span>
+            <span class="showcase-tag">Tech Policy</span>
+            <span class="showcase-tag">Responsible AI</span>
+            <span class="showcase-tag">Keynotes</span>
+          </div>
+          <div class="showcase-meta">
+            <div class="showcase-stat">
+              <i data-lucide="play-circle"></i>
+              3 talks embedded
+            </div>
+            <div class="showcase-stat">
+              <i data-lucide="map-pin"></i>
+              San Francisco
+            </div>
+            <a href="#" class="showcase-book">
+              <i data-lucide="calendar"></i> Book
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Maria Rodriguez -->
+      <div class="profile-showcase-card fade-in fade-in-delay-2">
+        <div class="profile-card-header">
+          <div class="showcase-avatar a2" style="position:relative;">
+            MR
+            <div class="showcase-avatar-verified">
+              <i data-lucide="check"></i>
+            </div>
+          </div>
+          <div class="showcase-header-info">
+            <div class="showcase-url">sisy.my/maria-rodriguez</div>
+            <div class="showcase-name">Maria Rodriguez</div>
+            <p class="showcase-role">Climate Policy Advisor · UN Consultant</p>
+          </div>
+        </div>
+        <div class="profile-card-body">
+          <p class="showcase-bio">
+            Fifteen years shaping climate legislation across the EU and Latin America.
+            COP29 speaker. I translate complex policy into action for leaders and teams.
+          </p>
+          <div class="showcase-tags">
+            <span class="showcase-tag">Climate Policy</span>
+            <span class="showcase-tag">Sustainability</span>
+            <span class="showcase-tag">ESG</span>
+            <span class="showcase-tag">EU Policy</span>
+          </div>
+          <div class="showcase-meta">
+            <div class="showcase-stat">
+              <i data-lucide="play-circle"></i>
+              5 talks embedded
+            </div>
+            <div class="showcase-stat">
+              <i data-lucide="map-pin"></i>
+              Madrid
+            </div>
+            <a href="#" class="showcase-book">
+              <i data-lucide="calendar"></i> Book
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aisha Patel -->
+      <div class="profile-showcase-card fade-in fade-in-delay-3">
+        <div class="profile-card-header">
+          <div class="showcase-avatar a3" style="position:relative;">
+            AP
+            <div class="showcase-avatar-verified">
+              <i data-lucide="check"></i>
+            </div>
+          </div>
+          <div class="showcase-header-info">
+            <div class="showcase-url">sisy.my/aisha-patel</div>
+            <div class="showcase-name">Aisha Patel</div>
+            <p class="showcase-role">FinTech Innovator · Forbes 30 Under 30</p>
+          </div>
+        </div>
+        <div class="profile-card-body">
+          <p class="showcase-bio">
+            Building the future of inclusive finance. WEF Young Global Leader,
+            founder of two FinTech ventures. Speaks on financial inclusion and Web3.
+          </p>
+          <div class="showcase-tags">
+            <span class="showcase-tag">FinTech</span>
+            <span class="showcase-tag">Financial Inclusion</span>
+            <span class="showcase-tag">Web3</span>
+            <span class="showcase-tag">Startups</span>
+          </div>
+          <div class="showcase-meta">
+            <div class="showcase-stat">
+              <i data-lucide="play-circle"></i>
+              4 talks embedded
+            </div>
+            <div class="showcase-stat">
+              <i data-lucide="map-pin"></i>
+              London
+            </div>
+            <a href="#" class="showcase-book">
+              <i data-lucide="calendar"></i> Book
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────
+     FEATURES
+───────────────────────────────────────────── -->
+<section class="section" id="features">
+  <div class="container">
+    <h2 class="fade-in">Everything on one page.<br><em style="font-style:italic;color:var(--clr-accent)">Nothing missing.</em></h2>
+    <p class="section-lead fade-in">Your sisy.my profile is a complete professional presence — not just a link, but a stage.</p>
+
+    <div class="grid grid-3">
+
+      <div class="feature-card fade-in fade-in-delay-1">
+        <div class="feature-icon"><i data-lucide="user-circle"></i></div>
+        <h3>Clean single-page profile</h3>
+        <p>Bio, headshots, speaking topics, and contact info — all in one beautifully designed page that loads instantly.</p>
+      </div>
+
+      <div class="feature-card fade-in fade-in-delay-2">
+        <div class="feature-icon"><i data-lucide="tag"></i></div>
+        <h3>Expertise tags</h3>
+        <p>Signal your topics at a glance. Tags make your profile discoverable to organizers searching for specific expertise.</p>
+      </div>
+
+      <div class="feature-card fade-in fade-in-delay-3">
+        <div class="feature-icon"><i data-lucide="video"></i></div>
+        <h3>Embedded talk videos</h3>
+        <p>Embed your best talks directly on your profile. Let your voice do the persuading before anyone sends a single email.</p>
+      </div>
+
+      <div class="feature-card fade-in fade-in-delay-1">
+        <div class="feature-icon"><i data-lucide="download"></i></div>
+        <h3>Media kit download</h3>
+        <p>A one-click download for organizers — high-res photo, bio, talk descriptions. Everything they need to book you.</p>
+      </div>
+
+      <div class="feature-card fade-in fade-in-delay-2">
+        <div class="feature-icon"><i data-lucide="calendar-check"></i></div>
+        <h3>Direct booking button</h3>
+        <p>Connect Calendly, Cal.com, or any booking tool. Turn profile visits into confirmed bookings automatically.</p>
+      </div>
+
+      <div class="feature-card fade-in fade-in-delay-3">
+        <div class="feature-icon"><i data-lucide="qr-code"></i></div>
+        <h3>QR code for events</h3>
+        <p>Generate your personal QR code — put it on name badges, slides, or print it on your conference swag.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────
+     URL TIERS
+───────────────────────────────────────────── -->
+<section class="section section-alt" id="tiers">
+  <div class="container">
+    <h2 class="fade-in">Choose your URL</h2>
+    <p class="section-lead fade-in">Start free and upgrade when your profile starts working for you.</p>
+
+    <div class="tiers-grid">
+
+      <!-- Free -->
+      <div class="tier-card fade-in fade-in-delay-1">
+        <span class="tier-badge">Free</span>
+        <div class="tier-url-display">sisy.my/u/<span class="url-highlight">12345</span></div>
+        <div class="tier-price">€0 <span>/ forever</span></div>
+        <p class="tier-desc">Get your profile live today with an auto-generated URL. Perfect for trying it out.</p>
+        <ul class="tier-features">
+          <li><i data-lucide="check"></i> Full expert profile page</li>
+          <li><i data-lucide="check"></i> Up to 2 embedded videos</li>
+          <li><i data-lucide="check"></i> Expertise tags</li>
+          <li><i data-lucide="check"></i> sisy.world community access</li>
+          <li class="muted"><i data-lucide="x"></i> Custom URL slug</li>
+          <li class="muted"><i data-lucide="x"></i> Media kit download</li>
+          <li class="muted"><i data-lucide="x"></i> Booking button</li>
+          <li class="muted"><i data-lucide="x"></i> QR code generator</li>
+        </ul>
+        <a href="https://sisy.world" class="btn btn-ghost tier-cta">Get Started Free</a>
+      </div>
+
+      <!-- Pro -->
+      <div class="tier-card featured fade-in fade-in-delay-2">
+        <span class="tier-badge">Pro</span>
+        <div class="tier-url-display">sisy.my/<span class="url-highlight">yourname</span></div>
+        <div class="tier-price">€9 <span>/ month</span></div>
+        <p class="tier-desc">Your name in the URL. More professional, more memorable, more bookings.</p>
+        <ul class="tier-features">
+          <li><i data-lucide="check"></i> Everything in Free</li>
+          <li><i data-lucide="check"></i> Custom URL slug</li>
+          <li><i data-lucide="check"></i> Unlimited embedded videos</li>
+          <li><i data-lucide="check"></i> Media kit download</li>
+          <li><i data-lucide="check"></i> Direct booking button</li>
+          <li><i data-lucide="check"></i> QR code generator</li>
+          <li><i data-lucide="check"></i> Profile analytics</li>
+          <li class="muted"><i data-lucide="x"></i> Custom domain</li>
+        </ul>
+        <a href="https://sisy.world" class="btn btn-primary tier-cta">Claim Your Name</a>
+      </div>
+
+      <!-- Elite -->
+      <div class="tier-card fade-in fade-in-delay-3">
+        <span class="tier-badge">Elite</span>
+        <div class="tier-url-display"><span class="url-highlight">yourname</span>.com</div>
+        <div class="tier-price">€29 <span>/ month</span></div>
+        <p class="tier-desc">Connect your own domain. Your brand, your URL — powered by SISY infrastructure.</p>
+        <ul class="tier-features">
+          <li><i data-lucide="check"></i> Everything in Pro</li>
+          <li><i data-lucide="check"></i> Custom domain connection</li>
+          <li><i data-lucide="check"></i> White-label branding</li>
+          <li><i data-lucide="check"></i> Priority support</li>
+          <li><i data-lucide="check"></i> Advanced analytics</li>
+          <li><i data-lucide="check"></i> Speaker agency features</li>
+          <li><i data-lucide="check"></i> Multi-profile management</li>
+          <li><i data-lucide="check"></i> API access</li>
+        </ul>
+        <a href="https://sisy.world" class="btn btn-outline tier-cta">Go Elite</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────
+     HOW TO GET YOURS
+───────────────────────────────────────────── -->
+<section class="section" id="how-it-works">
+  <div class="container">
+    <h2 class="fade-in">Get your URL in <em style="font-style:italic;color:var(--clr-accent)">3 steps</em></h2>
+    <p class="section-lead fade-in">From zero to professional speaker profile in under 5 minutes.</p>
+
+    <div class="steps">
+
+      <div class="step fade-in fade-in-delay-1">
+        <div class="step-num">1</div>
+        <h3>Sign up on sisy.world</h3>
+        <p>Create your free SISY account. Join a community of women experts who are getting on more stages.</p>
+        <a href="https://sisy.world" class="step-link">
+          sisy.world <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="step fade-in fade-in-delay-2">
+        <div class="step-num">2</div>
+        <h3>Complete your profile</h3>
+        <p>Add your bio, expertise tags, talk videos, headshots, and booking link. The profile writes itself as you go.</p>
+        <a href="https://sisy.world" class="step-link">
+          Profile guide <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="step fade-in fade-in-delay-3">
+        <div class="step-num">3</div>
+        <h3>Share your link everywhere</h3>
+        <p>Put <strong>sisy.my/yourname</strong> in your LinkedIn bio, email signature, conference badges, and stage decks.</p>
+        <a href="#tiers" class="step-link">
+          Upgrade to Pro <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────
+     FINAL CTA
+───────────────────────────────────────────── -->
+<section class="section-cta">
+  <div class="container">
+    <span class="hero-label fade-in">Your name is waiting</span>
+    <h2 class="fade-in">Claim <em style="font-style:italic;">sisy.my/yourname</em> today</h2>
+    <p class="section-lead fade-in">
+      The experts who get booked are the ones who are easy to find.
+      One beautiful link. All your credibility. Always ready to share.
+    </p>
+
+    <div class="url-claim-input fade-in">
+      <span class="url-claim-prefix">sisy.my/</span>
+      <input type="text" placeholder="yourname" aria-label="Choose your profile slug">
+      <a href="https://sisy.world" class="btn btn-primary btn-sm">Claim It</a>
+    </div>
+    <p class="cta-note fade-in">Free to start &nbsp;·&nbsp; No credit card required &nbsp;·&nbsp; Takes 5 minutes</p>
+  </div>
+</section>
+
+{{ end }}

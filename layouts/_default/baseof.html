@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — sisy.my{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — sisy.my{{ end }}">
+  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('sisy-theme');
+      if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="{{ .Site.BaseURL }}" class="nav-logo">sisy<span>.my</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <i data-lucide="menu"></i>
+      </button>
+      <div class="nav-links">
+        <a href="#examples">See Examples</a>
+        <a href="#features">Features</a>
+        <a href="#tiers">Pricing</a>
+        <a href="https://sisy.world">sisy.world</a>
+        <a href="https://sisy.world" class="btn btn-primary btn-sm">Claim Your URL</a>
+      </div>
+      <button class="theme-toggle" aria-label="Toggle dark mode" onclick="toggleTheme()">
+        <i data-lucide="sun" class="icon-sun"></i>
+        <i data-lucide="moon" class="icon-moon"></i>
+      </button>
+    </div>
+  </nav>
+
+  {{ block "main" . }}{{ end }}
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <p class="footer-brand">sisy<span>.my</span></p>
+          <p class="footer-tagline">One link that says everything. Your expert profile URL — beautiful, shareable, always on.</p>
+          <div class="footer-social">
+            <a href="https://linkedin.com/company/sisyworld" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a href="https://instagram.com/sisy.world" aria-label="Instagram" target="_blank" rel="noopener">
+              <i data-lucide="instagram"></i>
+            </a>
+            <a href="https://sisy.social" aria-label="Community" target="_blank" rel="noopener">
+              <i data-lucide="users"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>SISY Ecosystem</h4>
+          <ul>
+            <li><a href="https://sisy.world">sisy.world — Platform</a></li>
+            <li><a href="https://sisy.pro">sisy.pro — Professional</a></li>
+            <li><a href="https://sisy.video">sisy.video — Talk Reels</a></li>
+            <li><a href="https://sisy.today">sisy.today — Opportunities</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="https://sisy.social">sisy.social</a></li>
+            <li><a href="https://discord.gg/sisy">Discord</a></li>
+            <li><a href="https://sisy.social/framework/">Framework</a></li>
+            <li><a href="https://sisy.social/about/">About SISY</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Your Profile</h4>
+          <ul>
+            <li><a href="#tiers">Free vs Pro</a></li>
+            <li><a href="#features">All Features</a></li>
+            <li><a href="https://sisy.world">Sign Up</a></li>
+            <li><a href="mailto:hello@sisy.world">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <ul>
+            <li><a href="https://sisy.team">sisy.team</a></li>
+            <li><a href="https://sisy.courses">sisy.courses</a></li>
+            <li><a href="https://github.com/mzzavaa">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; {{ now.Year }} SISY. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="/impressum/">Impressum</a>
+          <a href="/privacy/">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+
+    function toggleTheme() {
+      var html = document.documentElement;
+      var current = html.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('sisy-theme', next);
+    }
+
+    // Scroll fade-in
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(function(el) {
+      observer.observe(el);
+    });
+
+    // Animated URL typing in hero
+    var urlDisplay = document.getElementById('url-type');
+    if (urlDisplay) {
+      var names = ['sarah-chen', 'maria-rodriguez', 'aisha-patel', 'yourname'];
+      var idx = 0;
+      function typeNext() {
+        var name = names[idx % names.length];
+        urlDisplay.textContent = '';
+        var i = 0;
+        var t = setInterval(function() {
+          urlDisplay.textContent += name[i];
+          i++;
+          if (i >= name.length) {
+            clearInterval(t);
+            setTimeout(function() {
+              var d = setInterval(function() {
+                urlDisplay.textContent = urlDisplay.textContent.slice(0, -1);
+                if (urlDisplay.textContent.length === 0) {
+                  clearInterval(d);
+                  idx++;
+                  setTimeout(typeNext, 300);
+                }
+              }, 60);
+            }, 2200);
+          }
+        }, 80);
+      }
+      setTimeout(typeNext, 800);
+    }
+  </script>
+</body>
+</html>
