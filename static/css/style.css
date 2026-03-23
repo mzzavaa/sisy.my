@@ -210,15 +210,20 @@ a:hover { color: var(--clr-accent-hover); }
 .btn-sm { padding: 8px 20px; font-size: 0.85rem; }
 
 /* ── Scroll Animations ── */
+/* Default: visible (progressive enhancement — JS adds .js-fade to <html>) */
 .fade-in {
-  opacity: 0;
-  transform: translateY(24px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+/* Only hide when JS is running */
+.js-fade .fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
 .fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 .fade-in-delay-1 { transition-delay: 0.1s; }
