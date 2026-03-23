@@ -1,7 +1,7 @@
-# sisy.my — Personal Expert Profile URLs
+# sisy.my - Personal Expert Profile URLs
 
 **Domain:** sisy.my
-**Role:** Core Product — Personal profile URL system (sisy.my/yourname)
+**Role:** Core Product - Personal profile URL system (sisy.my/yourname)
 **Priority:** Phase 1
 **Notion:** See SISY Domain Strategy page
 

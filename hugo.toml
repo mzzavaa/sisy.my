@@ -1,7 +1,7 @@
 baseURL = "https://sisy.my"
 languageCode = "en-us"
-title = "sisy.my — Your Expert Profile, One Link Away"
+title = "sisy.my - Your Expert Profile, One Link Away"
 
 [params]
-  description = "sisy.my/yourname — a beautiful speaker card URL for women experts. Share your expertise, talks, and booking link in one powerful link."
+  description = "sisy.my/yourname - a beautiful speaker card URL for women experts. Share your expertise, talks, and booking link in one powerful link."
   ogImage = "/img/og-sisymy.png"

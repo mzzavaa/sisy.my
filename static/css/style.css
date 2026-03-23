@@ -210,7 +210,7 @@ a:hover { color: var(--clr-accent-hover); }
 .btn-sm { padding: 8px 20px; font-size: 0.85rem; }
 
 /* ── Scroll Animations ── */
-/* Default: visible (progressive enhancement — JS adds .js-fade to <html>) */
+/* Default: visible (progressive enhancement - JS adds .js-fade to <html>) */
 .fade-in {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
